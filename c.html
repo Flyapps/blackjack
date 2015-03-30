@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Clear Cache</title>
+
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            text-align: center;
+        }
+        #container input {
+            width: 96%;
+            padding: 10px 0;
+            margin: 20px auto;
+            font-size: 31px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <input type="button" id="clear" value="Clear Cache" />
+        <input type="button" id="open" value="Open Game" />
+    </div>
+
+    <script>
+        document.getElementById('clear').addEventListener('click', clearCache);
+        document.getElementById('open').addEventListener('click', openApp);
+        
+        function clearCache() {
+            localStorage.clear();
+            alert('All cache cleared');
+        }
+        function openApp() {
+            window.open('/', '_blank');
+        }
+    </script>
+</body>
+</html>
